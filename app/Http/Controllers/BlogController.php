@@ -56,14 +56,14 @@ class BlogController extends Controller
                   ->orderBy('created_at', 'desc');
         }]);
         
-        $related_posts = Post::published()
+        $relatedPosts = Post::published()
             ->where('id', '!=', $post->id)
             ->where('category_id', $post->category_id)
             ->with(['user', 'category'])
             ->limit(3)
             ->get();
             
-        return view('blog.show', compact('post', 'related_posts'));
+        return view('blog.show', compact('post', 'relatedPosts'));
     }
     
     public function category(Category $category)

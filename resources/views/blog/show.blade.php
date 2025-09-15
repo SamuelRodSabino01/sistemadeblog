@@ -98,7 +98,7 @@
         <!-- Post Content -->
         <div class="prose prose-lg max-w-none mb-12">
             <div class="text-gray-800 leading-relaxed">
-                {!! nl2br(e($post->content)) !!}
+                {!! $post->content !!}
             </div>
         </div>
         

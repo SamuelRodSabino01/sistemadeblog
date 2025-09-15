@@ -44,7 +44,7 @@
                 <div class="prose max-w-none">
                     <h3 class="text-lg font-semibold text-gray-900 mb-4">Conteúdo</h3>
                     <div class="bg-white p-6 rounded-lg border border-gray-200">
-                        {!! nl2br(e($post->content)) !!}
+                        {!! $post->content !!}
                     </div>
                 </div>
                 
